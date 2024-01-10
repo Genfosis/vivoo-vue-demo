@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <GenfosisScoreBox/>
+      <StatsListView/>
     </v-main>
   </v-app>
 </template>

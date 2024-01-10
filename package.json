@@ -2,7 +2,7 @@
   "name": "vivoo-vue-demo",
   "version": "0.0.0",
   "scripts": {
-    "dev": "node --no-warnings ./node_modules/.bin/vite",
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
@@ -12,6 +12,7 @@
     "roboto-fontface": "*",
     "vue": "^3.3.0",
     "vue-chartjs": "^5.3.0",
+    "vue-router": "^4.2.5",
     "vuetify": "^3.0.0"
   },
   "devDependencies": {

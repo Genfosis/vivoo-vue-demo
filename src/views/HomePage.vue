@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Hydration from '@/assets/images/hydration.png'
 
+
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify/lib/framework.mjs';
 defineProps<{fullName: string}>()
@@ -45,86 +46,96 @@ const display = useDisplay()
     </v-container>
     <!-- Vivoo Score Section -->
     <v-container class="section-name-container">
-        <h2 style="margin: -10px 0px -5px 0px;">Vivoo Score</h2>
+        <h2 style="margin: -10px 0px 0px 0px;">Vivoo Score</h2>
     </v-container>
     <v-container class="home-container">
         <v-row class="align-center">
             <v-col cols="6" md="4" >
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,#47A9DA 0%, white 80%)"></div>
-                    <v-container class="vivoo-score-container">
-                        <h2>Dehydrated</h2>
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container"  >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
                         <p class="text-body-2">Water</p>
+                        <div style="display: flex">
+                            <h3 style="">dehydrated</h3>
+                        </div>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,orange,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Optimal</h2>
                         <p class="text-body-2">pH</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,blue,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Optimal</h2>
                         <p class="text-body-2">Calcium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,purple,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Low</h2>
                         <p class="text-body-2">Magnesium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,orangered,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Low</h2>
                         <p class="text-body-2">Vitamin C</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,gray,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>High</h2>
                         <p class="text-body-2">Sodium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,salmon,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Great</h2>
                         <p class="text-body-2">Protein</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,darkslategray,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>No risk</h2>
                         <p class="text-body-2">Oxidative Stress</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
-                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,#6FAF83 0%,white 80%)"></div>
-                    <v-container class="vivoo-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet reddot" style="background-color: cadetblue;">
+                    <v-container class="vivoo-score-container" >
+                        <v-avatar :image="Hydration" :size="60" style="margin-top: -10px;margin-left: -10px;"></v-avatar>
+
                         <h2>Great</h2>
                         <p class="text-body-2">Ketone</p>
                     </v-container>
@@ -143,6 +154,12 @@ const display = useDisplay()
 
 </template>
 <style scoped>
+.reddot {
+    background-image: url('@/assets/images/reddot.png');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 10px) 10px;
+}
 .home-container {
     padding: 5px 16px 5px 16px;
 }
@@ -162,8 +179,7 @@ const display = useDisplay()
     padding: 15px;
 }
 .vivoo-score-sheet {
-    /* background-color: #ffecc9; */
-    padding-bottom: 15px;
+    padding: 0px 0px 0px 0px;
 }
 .vivoo-score-header {
     width: 100%;
@@ -172,13 +188,10 @@ const display = useDisplay()
     border-top-right-radius: 5px;
 }
 .vivoo-score-container {
-    padding: 5px;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    color: white;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 .achievement-banner {
     width: 60%;

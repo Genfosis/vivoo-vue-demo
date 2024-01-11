@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import Hydration from '@/assets/images/hydration.png'
 
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify/lib/framework.mjs';
@@ -49,88 +49,90 @@ const display = useDisplay()
     </v-container>
     <v-container class="home-container">
         <v-row class="align-center">
-            <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
-                        <h2>Dehydration</h2>
-                        <p>Water</p>
+            <v-col cols="6" md="4" >
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,#47A9DA 0%, white 80%)"></div>
+                    <v-container class="vivoo-score-container">
+                        <h2>Dehydrated</h2>
+                        <p class="text-body-2">Water</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,orange,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Optimal</h2>
-                        <p>pH</p>
+                        <p class="text-body-2">pH</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,blue,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Optimal</h2>
-                        <p>Calcium</p>
+                        <p class="text-body-2">Calcium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,purple,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Low</h2>
-                        <p>Magnesium</p>
+                        <p class="text-body-2">Magnesium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,orangered,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Low</h2>
-                        <p>Vitamin C</p>
+                        <p class="text-body-2">Vitamin C</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,gray,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>High</h2>
-                        <p>Sodium</p>
+                        <p class="text-body-2">Sodium</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,salmon,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Great</h2>
-                        <p>Protein</p>
+                        <p class="text-body-2">Protein</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,darkslategray,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>No risk</h2>
-                        <p>Oxidative Stress</p>
+                        <p class="text-body-2">Oxidative Stress</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             <v-col cols="6" md="4">
-                <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
+                <v-sheet rounded :elevation="5" class="vivoo-score-sheet">
+                    <div class="vivoo-score-header" style="background: linear-gradient(180deg,#6FAF83 0%,white 80%)"></div>
+                    <v-container class="vivoo-score-container">
                         <h2>Great</h2>
-                        <p>Ketone</p>
+                        <p class="text-body-2">Ketone</p>
                     </v-container>
                 </v-sheet>
             </v-col>
             
 
 
-
-                <!-- <v-sheet rounded :elevation="5" class="stats-container">
-                    <v-container class="gfs-score-container">
-                        <h2>18K/12K</h2>
-                        <p>Steps</p>
-                    </v-container>
-                </v-sheet> -->
         </v-row>       
     </v-container>
     
@@ -156,8 +158,27 @@ const display = useDisplay()
     text-align: center;
 }
 .stats-container {
-    background-color: #ffecc9;
+    /* background-color: #ffecc9; */
     padding: 15px;
+}
+.vivoo-score-sheet {
+    /* background-color: #ffecc9; */
+    padding-bottom: 15px;
+}
+.vivoo-score-header {
+    width: 100%;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.vivoo-score-container {
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .achievement-banner {
     width: 60%;

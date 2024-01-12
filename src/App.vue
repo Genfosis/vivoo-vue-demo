@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import Avatar from "@/assets/images/mock_avatar.png"
+import { useRouter } from "vue-router";
+import { HOME_PAGE } from "./routes/route-name";
+const router = useRouter()
 </script>
 <template>
   <v-app>
-    <v-app-bar :elevation="2">
+    <v-app-bar :elevation="2" color="primary">
       <template v-slot:prepend>
         <v-avatar :image="Avatar"></v-avatar>
       </template>
@@ -14,20 +17,20 @@ import Avatar from "@/assets/images/mock_avatar.png"
     <v-main>
       <router-view></router-view>
     </v-main>
-    <v-bottom-navigation>
-    <v-btn value="recent">
+    <v-bottom-navigation bg-color="primary">
+    <v-btn value="recent" @click="() => router.push({name: HOME_PAGE})">
       <v-icon>mdi-home-account</v-icon>
       <span>Home</span>
     </v-btn>
-    <v-btn value="favorites">
+    <v-btn disabled value="favorites">
       <v-icon>mdi-microscope</v-icon>
       <span>Scan</span>
     </v-btn>
-    <v-btn value="favorites">
+    <v-btn disabled value="favorites">
       <v-icon>mdi-handshake</v-icon>
       <span>Habit Partner</span>
     </v-btn>
-    <v-btn value="nearby">
+    <v-btn disabled value="nearby">
       <v-icon>mdi-medal</v-icon>
       <span>Leaderboard</span>
     </v-btn>

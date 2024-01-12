@@ -9,9 +9,9 @@ import { useDisplay } from 'vuetify/lib/framework.mjs';
 defineProps<{fullName: string}>()
 const display = useDisplay()
 const isMobile = display.smAndDown
-const hydration = ref(40)
-const fitnessLevel = ref(70)
-const eatingHabit = ref(30)
+const hydration = ref(30)
+const fitnessLevel = ref(40)
+const eatingHabit = ref(80)
 
 </script>
 <template>
@@ -19,16 +19,22 @@ const eatingHabit = ref(30)
     <v-container>
         <v-sheet rounded :elevation="5" class="stats-container">
         <v-container class="background">
-            <h1 class="text-h6">Junee Juriya</h1>
+            <h1 class="text-h5">Junee Juriya</h1>
             <h2 class="text-subtitle-1">15-01-2024</h2>
+                <div v-if="isMobile" class="mobile-health-score">
+                    <h1 class="text-h6">Health Score</h1>
+                    <v-avatar class="health-score" variant="elevated" :size="30" color="#4D8FA3" text="70"></v-avatar>
+                </div>
         <v-row class="align-center">
             <v-col :cols="isMobile? 4:6">
                 <v-img v-if="!isMobile" :src="Avatar" aspect-ratio="16/9"></v-img>
             </v-col>
             <v-col>
                 <v-container class="detail">
+                    <div v-if="!isMobile">
                     <h1 class="text-h6">Health Score</h1>
-                    <v-avatar class="health-score" variant="elevated" :size="isMobile? 30: 60" color="blue" text="70"></v-avatar>
+                    <v-avatar class="health-score" variant="elevated" :size="60" color="#4D8FA3" text="70"></v-avatar>
+                    </div>
                     <div class="progress-bar-wrapper">
                         <v-avatar :size="isMobile? 40: 50" :image="Hydration"></v-avatar>
                         <v-progress-linear
@@ -52,7 +58,7 @@ const eatingHabit = ref(30)
                         <v-progress-linear
                             v-model="eatingHabit"
                             rounded
-                            color="amber"
+                            color="#4CAF50"
                             :height="isMobile? 10: 20"
                         ></v-progress-linear>
                     </div>
@@ -67,7 +73,8 @@ const eatingHabit = ref(30)
                 <v-avatar size="40" :image="Streak"></v-avatar>
             </v-col>
             <v-col :cols="isMobile? 10: 11">
-                <p>4 Week Exercise Streak !</p>
+                <h3 class="text-h6">Achievement</h3>
+                <p class="text-body">4 Week Exercise Streak</p>
             </v-col>
            </v-row>
         </v-container>
@@ -76,7 +83,7 @@ const eatingHabit = ref(30)
     </v-container>
     <v-container>
         <v-row justify="end">
-       <v-btn prepend-icon="mdi-share-variant" color="primary" class="butotn">Share</v-btn>
+       <v-btn prepend-icon="mdi-share-variant" color="tertiary">Share</v-btn>
     </v-row>
     </v-container>
 </v-container>
@@ -101,6 +108,11 @@ const eatingHabit = ref(30)
     padding: 10px;
   
 }
+.mobile-health-score {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
 @media only screen and (max-width: 960px) {
  .stats-container {
     background-size: 160px;
@@ -108,6 +120,9 @@ const eatingHabit = ref(30)
     background-position: left;
     background-repeat: no-repeat;
     padding: 15px;
+ }
+ .background {
+    text-align: center;
  }
 }
 

@@ -35,7 +35,7 @@ const resultNumber = computed(() => isWater? '1.020': '0')
 <template>
     <v-container>
     <v-container>
-        <v-sheet :elevation="3" rounded class="stat-container" :class="{['keto-container']: !isWater, ['water-container']: isWater}">
+        <v-card :elevation="3" rounded class="stat-container" :class="{['keto-container']: !isWater, ['water-container']: isWater}">
             <v-container>
             <v-img :src="icon" max-height="100px" ></v-img>
                 <h1 class="text-h4">{{title}}</h1>
@@ -55,7 +55,7 @@ const resultNumber = computed(() => isWater? '1.020': '0')
                     </v-col>
                 </v-row>
             </v-container>
-        </v-sheet>
+        </v-card>
     </v-container>
     <v-container>
             <v-container>
@@ -87,5 +87,8 @@ const resultNumber = computed(() => isWater? '1.020': '0')
 
 .water-container {
     background: linear-gradient(180deg, #47A9DA 0%, #FFFFFF 20%);
+}
+.v-container {
+    padding: 5px;
 }
 </style>

@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import Avatar from "@/assets/images/mock_avatar.png"
+import { useRouter } from "vue-router";
+import { HOME_PAGE } from "./routes/route-name";
+const router = useRouter()
 </script>
 <template>
   <v-app>
@@ -15,7 +18,7 @@ import Avatar from "@/assets/images/mock_avatar.png"
       <router-view></router-view>
     </v-main>
     <v-bottom-navigation bg-color="primary">
-    <v-btn value="recent">
+    <v-btn value="recent" @click="() => router.push({name: HOME_PAGE})">
       <v-icon>mdi-home-account</v-icon>
       <span>Home</span>
     </v-btn>

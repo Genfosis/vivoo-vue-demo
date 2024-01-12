@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router';
 import Hydration from '@/assets/images/hydration.png'
 import BulletPoint from '@/assets/images/bullet_point.png'
 import Keto from '@/assets/images/keto.png'
+
 const route = useRoute()
 const id = parseInt(route.params["id"] as string)
 const isWater = id === 1
